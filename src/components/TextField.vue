@@ -6,7 +6,7 @@
           <v-col cols="12">
             <v-textarea v-model="string">
               <template v-slot:label>
-                <div>Paste text here</div>
+                <div>Type or paste text here</div>
               </template>
             </v-textarea>
           </v-col>
