@@ -16,6 +16,7 @@
           elevation="3"
           large
           block
+          :disabled="string.trim().length == 0"
           @click="state == 'main' ? (state = 'read') : (state = 'main')"
           >{{ state == "read" ? "STOP" : "READ" }}</v-btn
         >
