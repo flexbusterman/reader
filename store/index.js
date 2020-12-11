@@ -1,13 +1,21 @@
 import Vue from 'vue';
 import Vuex from 'vuex';
+import { getField, updateField } from 'vuex-map-fields';
 
 Vue.use(Vuex);
 
 export default new Vuex.Store({
 	state: {
-		count: 0
+		count: 0,
+		string: "Paste text here"
 	},
+  getters: {
+    // Add the `getField` getter to the
+    // `getters` of your Vuex store instance.
+    getField,
+  },
 	mutations: {
+    updateField,
 		add(state, payload) {
 			// If we get a payload, add it to count
 			// Else, just add one to count
