@@ -2,8 +2,13 @@
   <v-app>
     <div v-if="state == 'main'">
       <TextField />
-      <Options />
     </div>
+    <div v-if="state == 'read'">
+      <Reader />
+    </div>
+    <v-footer fixed>
+      <Options />
+    </v-footer>
   </v-app>
 </template>
 
@@ -11,6 +16,7 @@
 import { mapFields } from "vuex-map-fields";
 import TextField from "./components/TextField.vue";
 import Options from "./components/Options.vue";
+import Reader from "./components/Reader.vue";
 
 export default {
   name: "App",
@@ -20,6 +26,7 @@ export default {
   components: {
     TextField,
     Options,
+    Reader,
   },
   data: () => ({
     //
@@ -33,3 +40,5 @@ export default {
   },
 };
 </script>
+<style>
+</style>>

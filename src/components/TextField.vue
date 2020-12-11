@@ -1,5 +1,5 @@
 <template>
-  <v-card flat>
+  <v-card height="100%">
     <v-form ref="form" @submit.prevent="submit">
       <v-container fluid>
         <v-row>

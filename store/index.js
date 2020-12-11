@@ -13,8 +13,9 @@ Fusce vulputate velit quis dui mattis placerat. In posuere felis est, facilisis 
 Cras eget blandit massa. Mauris sit amet tempor erat. Cras a varius elit. Proin lobortis, quam at imperdiet aliquet, sem nunc faucibus nisi, ac volutpat arcu magna vitae ligula. Nulla euismod nisi quis ante semper, id euismod urna efficitur. Aenean viverra urna enim. Donec et mattis odio. Etiam vehicula ultrices tellus. Integer justo lectus, maximus nec iaculis non, finibus eget sapien. Pellentesque euismod molestie arcu in lobortis. Aenean vel fringilla mi, vel aliquet dolor. Quisque suscipit imperdiet augue, at viverra felis rhoncus et. Nullam ligula orci, interdum sed dapibus ac, varius accumsan nibh.
 		`,
 		state: "main",
-		speed: 1,
+		speed: 5,
 		dark: true,
+		index: 0,
 	},
   getters: {
     // Add the `getField` getter to the

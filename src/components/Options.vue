@@ -2,27 +2,23 @@
   <v-container>
     <v-row>
       <v-col>
-        <v-btn
-          elevation="3"
-          large
-          block
-          @click="this.$vuetify.theme.dark = !this.$vuetify.theme.dark"
+        <v-btn elevation="3" large block @click="toggleDark"
           >TOGGLE DARK MODE</v-btn
         >
       </v-col>
       <v-col>
-        <v-slider
-          v-model="speed"
-          label="Speed"
-          thumb-label="always"
-          :max="10"
-          :min="1"
-        ></v-slider>
+        <v-slider v-model="speed" label="Speed" :max="10" :min="1"></v-slider>
       </v-col>
     </v-row>
     <v-row>
       <v-col>
-        <v-btn elevation="3" large block @click="state = 'read'">READ</v-btn>
+        <v-btn
+          elevation="3"
+          large
+          block
+          @click="state == 'main' ? (state = 'read') : (state = 'main')"
+          >{{ state == "read" ? "STOP" : "READ" }}</v-btn
+        >
       </v-col>
     </v-row>
   </v-container>
@@ -35,7 +31,13 @@ export default {
     return {};
   },
   computed: {
-    ...mapFields(["string", "state", "speed"]),
+    ...mapFields(["string", "state", "speed", "dark"]),
+  },
+  methods: {
+    toggleDark() {
+      this.dark = !this.dark;
+      this.$vuetify.theme.dark = this.dark;
+    },
   },
 };
 </script>
